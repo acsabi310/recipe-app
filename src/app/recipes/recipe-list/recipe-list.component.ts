@@ -8,8 +8,8 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
 
 	recipes: Recipe[] = [
-		new Recipe('A test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*')
-		new Recipe('A test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*')
+		new Recipe('A test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*'),
+		new Recipe('A test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*'),
 		new Recipe('A test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*')
 	];
 
