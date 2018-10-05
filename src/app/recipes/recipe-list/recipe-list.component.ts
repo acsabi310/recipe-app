@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 @Component({
 	selector: 'app-recipe-list',
@@ -7,10 +7,12 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeListComponent implements OnInit {
 
+	@Output() recipeWasSelected = new EventEmitter<Recipe>();
+
 	recipes: Recipe[] = [
 		new Recipe('A test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*'),
-		new Recipe('A test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*'),
-		new Recipe('A test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*')
+		new Recipe('Another test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*'),
+		new Recipe('Third test recipe', 'A test', 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/34/2048x1024/landscape-1503418862-chicken-thighs-delish.jpg?resize=1200:*')
 	];
 
 	constructor() { }
@@ -18,4 +20,7 @@ export class RecipeListComponent implements OnInit {
 	ngOnInit() {
 	}
 
+	onRecipeSelected(recipe: Recipe) {
+		this.recipeWasSelected.emit(recipe);
+	}
 }
