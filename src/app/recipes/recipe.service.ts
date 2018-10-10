@@ -26,4 +26,8 @@ export class RecipeService {
 	getRecipes() {
 		return this.recipes.slice();	// ez egy új tömbböt ad vissza, ugyanaz mint ez, csak más referenciával
 	}
+
+	getRecipeById(index: number) {
+		return this.recipes.slice()[index];
+	}
 }
