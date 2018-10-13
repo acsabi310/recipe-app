@@ -49,4 +49,9 @@ export class RecipeService {
 		this.recipes.splice(index, 1);
 		this.refresh();
 	}
+
+	updateRecipes(recipes: Recipe[]) {
+		this.recipes = recipes;
+		this.refresh();
+	}
 }
