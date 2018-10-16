@@ -8,7 +8,8 @@ import { RecipeStartComponent } from './recipe-start/recipe-start.component';
 import { AuthGuard } from '../auth/auth-guard.service';
 
 const recipesRoutes: Routes = [
-	{path: 'recipes', component: RecipesComponent, children: [
+	// lazy miatt innen kivenni üresre a 'recipes' path-t
+	{path: '', component: RecipesComponent, children: [
 		{path: '', component: RecipeStartComponent},
 		// ha ilyen van, mindig a konkrét legyen elöl, utána a dinamikus! különben a 'new' szót ':id'-ként értelmezi
 		{path: 'new', component: RecipeEditComponent, canActivate: [AuthGuard]},
