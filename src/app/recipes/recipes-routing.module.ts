@@ -24,6 +24,10 @@ const recipesRoutes: Routes = [
 	],
 	exports: [
 		RouterModule
+	],
+	// csak itt van használva
+	providers: [
+		AuthGuard
 	]
 })
 export class RecipesRoutingModule {
